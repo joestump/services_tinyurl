@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.4.2" 
+         version="2.0" 
+         xmlns="http://pear.php.net/dtd/package-2.0" 
+         xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+                             http://pear.php.net/dtd/tasks-1.0.xsd
+                             http://pear.php.net/dtd/package-2.0
+                             http://pear.php.net/dtd/package-2.0.xsd">
+    <name>Services_TinyURL</name>
+    <channel>pear.php.net</channel>
+    <summary>PHP interface to TinyURL's API</summary>
+    <description>An interface for creating TinyURL's with their API as well as looking up destinations of given TinyURL's.</description>
+    <lead>
+        <name>Joe Stump</name>
+        <user>jstump</user>
+        <email>joe@joestump.net</email>
+        <active>yes</active>
+    </lead>
+    <date>2007-12-05</date>
+    <version>
+        <release>0.1.2</release>
+        <api>0.1.1</api>
+    </version>
+    <stability>
+        <release>beta</release>
+        <api>beta</api>
+    </stability>
+    <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+    <notes><![CDATA[
+        * Fixes bug #12486
+    ]]></notes>
+    <contents>
+        <dir name="/">
+            <dir name="Services">
+                <file name="TinyURL.php" role="php">
+                    <tasks:replace from="@version@" to="version" type="package-info" />
+                </file>
+                <dir name="TinyURL">
+                    <file name="Exception.php" role="php">
+                        <tasks:replace from="@version@" to="version" type="package-info" />
+                    </file>
+                </dir>
+            </dir>
+            <dir name="tests">
+                <file name="001-create.phpt"
+                      role="test" />
+                <file name="002-lookup.phpt"
+                      role="test" /> 
+                <file name="003-create-and-lookup.phpt"
+                      role="test" /> 
+                <file name="100-bug-12207.phpt"
+                      role="test" />
+                <file name="tests-config.php"
+                      role="test" /> 
+            </dir>
+        </dir>
+    </contents>
+    <dependencies>
+        <required>
+            <php>
+                <min>5.1.0</min>
+            </php>
+            <pearinstaller>
+                <min>1.4.0b1</min>
+            </pearinstaller>
+            <extension>
+                <name>curl</name>
+            </extension>
+        </required>
+    </dependencies>
+    <phprelease />
+    <changelog>
+        <release>
+            <date>2007-10-08</date>
+            <version>
+                <release>0.1.1</release>
+                <api>0.1.1</api>
+            </version>
+            <stability>
+                <release>beta</release>
+                <api>beta</api>
+            </stability>
+            <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+            <notes><![CDATA[
+                * Fixes bug #12207 
+            ]]></notes>
+            <contents>
+                <dir name="/">
+                    <dir name="Services">
+                        <file name="TinyURL.php" role="php">
+                            <tasks:replace from="@version@" to="version" type="package-info" />
+                        </file>
+                        <dir name="TinyURL">
+                            <file name="Exception.php" role="php">
+                                <tasks:replace from="@version@" to="version" type="package-info" />
+                            </file>
+                        </dir>
+                    </dir>
+                    <dir name="tests">
+                        <file name="001-create.phpt"
+                              role="test" />
+                        <file name="002-lookup.phpt"
+                              role="test" /> 
+                        <file name="003-create-and-lookup.phpt"
+                              role="test" /> 
+                        <file name="100-bug-12207.phpt"
+                              role="test" />
+                        <file name="tests-config.php"
+                              role="test" /> 
+                    </dir>
+                </dir>
+            </contents>
+        </release>
+        <release>
+            <date>2007-09-26</date>
+            <version>
+                <release>0.1.0</release>
+                <api>0.1.0</api>
+            </version>
+            <stability>
+                <release>beta</release>
+                <api>beta</api>
+            </stability>
+            <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+            <notes><![CDATA[
+                * Initial release
+            ]]></notes>
+            <contents>
+                <dir name="/">
+                    <dir name="Services">
+                        <file name="TinyURL.php"
+                              role="php" />
+                        <dir name="TinyURL">
+                            <file name="Exception.php"
+                                  role="php" />
+                        </dir>
+                    </dir>
+                    <dir name="tests">
+                        <file name="001-create.phpt"
+                              role="test" />
+                        <file name="002-lookup.phpt"
+                              role="test" /> 
+                        <file name="003-create-and-lookup.phpt"
+                              role="test" /> 
+                        <file name="tests-config.php"
+                              role="test" /> 
+                    </dir>
+                </dir>
+            </contents>
+        </release>
+        <release>
+            <version>
+                <release>0.0.4</release>
+                <api>0.0.4</api>
+            </version>
+            <stability>
+                <release>alpha</release>
+                <api>alpha</api>
+            </stability>
+            <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+            <notes><![CDATA[
+                * Fixed typo in regular expression
+                * Switched to a class that can be instantiated
+                * Switched from preg_match_all() to preg_match() in Services_TinyURL::lookup()
+                * Updated tests to reflect changes
+            ]]></notes>
+            <contents>
+                <dir name="/">
+                    <dir name="Services">
+                        <file name="TinyURL.php"
+                              role="php" />
+                        <dir name="TinyURL">
+                            <file name="Exception.php"
+                                  role="php" />
+                        </dir>
+                    </dir>
+                    <dir name="tests">
+                        <file name="001-create.phpt"
+                              role="test" />
+                        <file name="002-lookup.phpt"
+                              role="test" /> 
+                        <file name="003-create-and-lookup.phpt"
+                              role="test" /> 
+                        <file name="tests-config.php"
+                              role="test" /> 
+                    </dir>
+                </dir>
+            </contents>
+        </release>
+        <release>
+            <date>2007-09-10</date>
+            <version>
+                <release>0.0.3</release>
+                <api>0.0.3</api>
+            </version>
+            <stability>
+                <release>alpha</release>
+                <api>alpha</api>
+            </stability>
+            <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+            <notes><![CDATA[
+                * Fixed licenses in headers
+                * Fixed problem with urlencode()
+                * Changed requires for exceptions
+                * Added an extra test to both create a URL and compare it via lookup
+            ]]></notes>
+            <contents>
+                <dir name="/">
+                    <dir name="Services">
+                        <file name="TinyURL.php"
+                              role="php" />
+                        <dir name="TinyURL">
+                            <file name="Exception.php"
+                                  role="php" />
+                        </dir>
+                    </dir>
+                    <dir name="tests">
+                        <file name="001-create.phpt"
+                              role="test" />
+                        <file name="002-lookup.phpt"
+                              role="test" /> 
+                        <file name="003-create-and-lookup.phpt"
+                              role="test" /> 
+                        <file name="tests-config.php"
+                              role="test" /> 
+                    </dir>
+                </dir>
+            </contents>
+        </release>
+        <release>
+            <date>2007-09-10</date>
+            <version>
+                <release>0.0.2</release>
+                <api>0.0.2</api>
+            </version>
+            <stability>
+                <release>alpha</release>
+                <api>alpha</api>
+            </stability>
+            <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+            <notes><![CDATA[
+                * Moved Services_TinyURL_Exception into its own file.
+                * Made Services_TinyURL_Exception abstract.
+                * Remove dependence on Validate::url().
+                * Used CURLOPT_NOBODY instead of callback for headers.
+            ]]></notes>
+            <contents>
+                <dir name="/">
+                    <dir name="Services">
+                        <file name="TinyURL.php"
+                              role="php" />
+                        <dir name="TinyURL">
+                            <file name="Exception.php"
+                                  role="php" />
+                        </dir>
+                    </dir>
+                    <dir name="tests">
+                        <file name="001-create.phpt"
+                              role="test" />
+                        <file name="002-lookup.phpt"
+                              role="test" /> 
+                        <file name="tests-config.php"
+                              role="test" /> 
+                    </dir>
+                </dir>
+            </contents>
+        </release>
+        <release>
+            <date>2007-09-09</date>
+            <version>
+                <release>0.0.1</release>
+                <api>0.0.1</api>
+            </version>
+            <stability>
+                <release>alpha</release>
+                <api>alpha</api>
+            </stability>
+            <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+            <notes><![CDATA[
+                * Initial release
+            ]]></notes>
+            <contents>
+                <dir name="/">
+                    <dir name="Services">
+                        <file name="TinyURL.php"
+                              role="php" />
+                    </dir>
+                    <dir name="tests">
+                        <file name="001-create.phpt"
+                              role="test" />
+                        <file name="002-lookup.phpt"
+                              role="test" /> 
+                        <file name="tests-config.php"
+                              role="test" /> 
+                    </dir>
+                </dir>
+            </contents>
+        </release>
+    </changelog>
+</package>
